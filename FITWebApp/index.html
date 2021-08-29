@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NQR Finances</title>
+    <script src="js/index.js"></script>
+    <style>
+    .header{
+      font-family: Georgia, serif;
+      font-weight:900;
+      color: white;
+      background-color: rgb(84, 74, 226);
+      position: absolute;
+      margin: 30px 20%;
+      padding: 0px 17%;
+      border-radius: 20px;
+      text-align: center;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .information{
+      font-family: Georgia, serif;
+      font-weight: 900;
+      position: absolute;
+      margin: 40px 2%;
+    }
+    .login{
+      font-family: Georgia, serif;
+      font-weight: 900;
+      position: absolute;
+      margin: 10px 75%;
+    }
+    .LoginButton{
+      border: 1px solid #544ae2;
+      border-radius: 5px;
+      padding: 4px;
+      background-color: #544ae2;
+      color: #fff;
+    }
+    .button{
+      border: 1px solid #544ae2;
+      border-radius: 5px;
+      padding: 4px;
+      background-color: #544ae2;
+      color: #fff;
+    }
+    .header-box{
+      border-bottom-style: solid;
+      border-width: 1px;
+      border-bottom-color: darkgray;
+      position: relative;
+      padding: 70px;
+      pointer-events: none;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="information">
+      <table>
+        <tr>
+          <td><input type="button" id="About" class="button" value="About Us"></td>
+          <td><a href="https://fitwebapp.azurewebsites.net/"></a><img src="resources/logo.png" alt="NQR Logo"></a></td>
+        </tr>
+        <tr><td><input type="button" id="Contact" class="button" value="Contact Us"></td></tr>
+      </table>
+    </div>
+    <div class="header">
+      <h1>NQR Finances</h1>
+    </div>
+    <div class="login">
+      <table>
+        <tr>
+          <th colspan="2">Login</th>
+        </tr>
+        <tr>
+          <td>Username:</td>
+          <td><input input type="text" placeholder="Enter Username" id="Username"></td>
+        </tr>
+        <tr>
+          <td>Password:</td>
+          <td><input input type="password" placeholder="Enter Password" id="Password"></td>
+        </tr>
+        <tr>
+          <td><input style="margin: 0px 50%" type="button" id="Login" class="LoginButton" value="Login"></td>
+          <td><input type="button" id="Signup" class="LoginButton" value="Sign up"></td>
+        </tr>
+      </table>
+    </div>
+    <div class="header-box"></div>
+    <br>
+    <div class="Website">
+      <img style="margin: 0px 10%" src="resources/candofinance-stockmarket.png" alt="stonks" width="400" height="300">
+      <h3 style="margin: 0px 10%">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+      <br>
+      <br>
+      <img style="margin: 0px 40%" src="resources/finance.png" alt="other stonks" width="390" height="275">
+      <h3 style="margin: 0px 40%">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum bibendum pellentesque ipsum.</h3>
+    </div>
+
+    <script>
+      document.querySelector("#About").onclick = about;
+      document.querySelector("#Contact").onclick = contact;
+      document.querySelector("#Login").onclick = login;
+      document.querySelector("#Signup").onclick = Signup;
+
+      function about() {
+        window.location.href = "/About.html";
+      }
+      function contact() {
+        window.location.href = "/Contact.html";
+      }
+      function login() {
+        window.location.href = "/LoginPage.html";
+      }
+      function Signup() {
+        window.location.href = "/Signup.html";
+      }
+    </script>
+  </body>
+</html>
