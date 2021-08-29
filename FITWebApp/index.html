@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>NQR Finances</title>
-    <script src="js/index.js"></script>
+    <script  type="text/javascript" src="/index.js"></script>
     <style>
     .header{
       font-family: Georgia, serif;
@@ -60,9 +60,8 @@
       <table>
         <tr>
           <td><input type="button" id="About" class="button" value="About Us"></td>
-          <td><a href="https://fitwebapp.azurewebsites.net/"></a><img src="resources/logo.png" alt="NQR Logo"></a></td>
+          <td><a href="https://fitwebapp.azurewebsites.net/"><img src="resources/logo.png" alt="NQR Logo"></a></td>
         </tr>
-        <tr><td><input type="button" id="Contact" class="button" value="Contact Us"></td></tr>
       </table>
     </div>
     <div class="header">
@@ -100,21 +99,22 @@
 
     <script>
       document.querySelector("#About").onclick = about;
-      document.querySelector("#Contact").onclick = contact;
       document.querySelector("#Login").onclick = login;
       document.querySelector("#Signup").onclick = Signup;
 
       function about() {
-        window.location.href = "/About.html";
-      }
-      function contact() {
-        window.location.href = "/Contact.html";
+        document.location.href = "/About.html";
       }
       function login() {
-        window.location.href = "/LoginPage.html";
+        if(document.querySelector("#Username").value != "" && document.querySelector("#Password").value != "") {
+          document.location.href = "/MainPage.html";
+        } else {
+          window.alert("Please enter a valid login or sign up for our website!");
+          document.location.href = "/LoginPage.html";
+        }
       }
       function Signup() {
-        window.location.href = "/Signup.html";
+        document.location.href = "/Signup.html";
       }
     </script>
   </body>
